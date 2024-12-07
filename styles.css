@@ -24,7 +24,7 @@ header h2 {
 /* Banner Styles */
 .banner {
     position: relative;
-    background-image: url('images/A_vibrant_and_modern_cryptocurrency_banner_for_a_w.png'); /* Caminho correto */
+    background-image: url('images/waffle-banner.png'); /* Caminho correto para o banner */
     background-size: cover;
     background-position: center;
     height: 300px;
