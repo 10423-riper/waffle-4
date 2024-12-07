@@ -24,11 +24,11 @@ header h2 {
 /* Banner Styles */
 .banner {
     position: relative;
-    background-image: url('images/A_vibrant_and_modern_cryptocurrency_banner_for_a_w.png');
+    background-image: url('images/A_vibrant_and_modern_cryptocurrency_banner_for_a_w.png'); /* Caminho correto */
     background-size: cover;
     background-position: center;
     height: 300px;
-    filter: blur(8px);
+    filter: blur(8px); /* Desfoque */
     z-index: -1;
 }
 
