@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +13,13 @@
             <img src="images/wafflecoin-logo.png" alt="WaffleCoin Logo" style="width: 150px; height: 150px;">
             <h1>WaffleCoin Minigame</h1>
         </div>
-        <h2>Play to Win WaffleTokens!</h2>
+        <h2>Play and Earn WaffleCoins!</h2>
     </header>
 
     <section class="content">
         <h3>Minigame</h3>
-        <p>Try your skills and earn WaffleTokens by achieving high scores in this simple, fun game!</p>
-        
-        <!-- Simples Jogo -->
+        <p>Play and earn WaffleCoins by achieving high scores!</p>
+
         <div id="game">
             <button onclick="startGame()">Start Game</button>
             <p id="score">Score: 0</p>
@@ -36,11 +36,10 @@
         function startGame() {
             score = 0;
             document.getElementById('score').textContent = "Score: " + score;
-            // Simulação de incremento de score (pode ser substituído por um jogo real mais tarde)
             setInterval(function() {
                 score += 1;
                 document.getElementById('score').textContent = "Score: " + score;
-            }, 1000); // A cada segundo, o score aumenta
+            }, 1000);
         }
     </script>
 </body>
