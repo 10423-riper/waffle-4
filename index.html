@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,30 +9,49 @@
 </head>
 <body>
     <header>
-<section class="banner">
-    <div class="banner-content">
-        <h2>Welcome to WaffleCoin</h2>
-        <p>Your favorite cryptocurrency in the blockchain!</p>
-    </div>
-</section>
-
         <div class="logo">
             <img src="images/wafflecoin-logo.png" alt="WaffleCoin Logo">
             <h1>WaffleCoin</h1>
         </div>
-        <h2>The Sweetest Cryptocurrency in Blockchain</h2>
+        <h2>Your sweetest cryptocurrency on the blockchain</h2>
     </header>
 
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Welcome to WaffleCoin</h2>
+            <p>The sweetest blockchain experience!</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Buttons -->
     <section class="cta">
-        <a href="sobre.html"><button>About</button></a>
-        <a href="tokenomics.html"><button>Tokenomics</button></a>
-        <a href="buy.html"><button>Buy Now</button></a>
-        <a href="pumpfun.html"><button>Connect to Pump Fun</button></a>
-        <a href="phantom.html"><button>Connect to Phantom Wallet</button></a>
+        <a href="sobre.html"><button class="waffle-button">About</button></a>
+        <a href="tokenomics.html"><button class="waffle-button">Tokenomics</button></a>
+        <a href="buy.html"><button class="waffle-button">Buy Now</button></a>
+        <a href="pumpfun.html"><button class="waffle-button">Connect to Pump Fun</button></a>
+        <a href="phantom.html" onclick="connectPhantom()"><button class="waffle-button">Connect to Phantom Wallet</button></a>
     </section>
 
     <footer>
         <p>&copy; 2024 WaffleCoin. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Function to connect to Phantom wallet
+        function connectPhantom() {
+            if (window.solana && window.solana.isPhantom) {
+                window.solana.connect()
+                    .then((response) => {
+                        console.log('Connected to Phantom', response);
+                    })
+                    .catch((error) => {
+                        console.error('Error connecting to Phantom', error);
+                    });
+            } else {
+                alert('Please install Phantom Wallet extension!');
+            }
+        }
+    </script>
 </body>
 </html>
