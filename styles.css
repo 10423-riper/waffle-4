@@ -1,84 +1,50 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Estilo para o banner */
+.banner {
+    position: relative;
+    background-image: url('images/A_vibrant_and_modern_cryptocurrency_banner_for_a_w.png'); /* Imagem do banner */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajuste a altura do banner conforme necessário */
+    filter: blur(8px); /* Desfoque */
+    z-index: -1; /* Para colocar a imagem atrás do conteúdo */
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
-    color: #4e342e;
-}
-
-header {
-    background-color: #ffeb3b;
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
     text-align: center;
-    padding: 60px 20px;
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-header img {
-    width: 120px;
-    height: 120px;
-}
-
-header h1 {
-    font-size: 3.5rem;
+.banner h2 {
+    font-size: 3rem;
     font-weight: bold;
-    color: #6d4c41;
+    margin-bottom: 10px;
 }
 
-header h2 {
+.banner p {
     font-size: 1.5rem;
-    color: #6d4c41;
 }
 
-.cta {
-    text-align: center;
-    margin-top: 60px;
-}
-
-.cta button {
-    background-color: #ff9800;
+/* Estilo dos botões */
+button {
+    background-color: #FF9800; /* Cor de fundo dos botões */
     border: none;
     color: white;
+    padding: 15px 32px;
     font-size: 1.6rem;
-    padding: 20px 50px;
-    border-radius: 50px;
+    border-radius: 50px; /* Tornar os botões arredondados */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s; /* Efeito suave */
 }
 
-.cta button:hover {
-    background-color: #fb8c00;
+button:hover {
+    background-color: #fb8c00; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumentar o tamanho do botão quando hover */
 }
 
-.content {
-    text-align: center;
-    padding: 50px;
-}
-
-.content h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #6d4c41;
-}
-
-.chart img {
-    max-width: 100%;
-    margin-top: 20px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 15px;
-    background-color: #ffeb3b;
+button:focus {
+    outline: none; /* Remove o contorno ao clicar no botão */
 }
