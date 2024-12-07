@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minigame - WaffleCoin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/wafflecoin-logo.png" alt="WaffleCoin Logo" style="width: 150px; height: 150px;">
+            <h1>WaffleCoin Minigame</h1>
+        </div>
+        <h2>Play to Win WaffleTokens!</h2>
+    </header>
+
+    <section class="content">
+        <h3>Minigame</h3>
+        <p>Try your skills and earn WaffleTokens by achieving high scores in this simple, fun game!</p>
+        
+        <!-- Simples Jogo -->
+        <div id="game">
+            <button onclick="startGame()">Start Game</button>
+            <p id="score">Score: 0</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 WaffleCoin. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let score = 0;
+
+        function startGame() {
+            score = 0;
+            document.getElementById('score').textContent = "Score: " + score;
+            // Simulação de incremento de score (pode ser substituído por um jogo real mais tarde)
+            setInterval(function() {
+                score += 1;
+                document.getElementById('score').textContent = "Score: " + score;
+            }, 1000); // A cada segundo, o score aumenta
+        }
+    </script>
+</body>
+</html>

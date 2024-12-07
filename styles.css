@@ -63,6 +63,14 @@ header h2 {
     transition: background-color 0.3s, transform 0.3s;
     text-align: center;
     margin: 10px;  /* Adiciona uma margem ao redor dos botões */
+    display: flex;
+    align-items: center;
+}
+
+.waffle-button img {
+    margin-right: 10px;  /* Espaçamento entre a imagem e o texto */
+    width: 30px;  /* Ajuste o tamanho da imagem */
+    height: 30px;
 }
 
 .waffle-button:hover {
@@ -90,5 +98,6 @@ footer {
     padding: 15px;
     background-color: #FFEB3B;
 }
+
 
 
