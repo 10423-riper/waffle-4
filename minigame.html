@@ -1,122 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WaffleCoin Minigame</title>
+    <title>Minigame - WaffleCoin</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffeb3b;
-            color: #4e342e;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        #waffle {
-            width: 100px;
-            height: 100px;
-            background-color: #FF9800;
-            border-radius: 10px;
-            margin: 20px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        #waffle:hover {
-            background-color: #fb8c00;
-        }
-
-        .score-board {
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
-
-        .timer {
-            font-size: 1.8rem;
-            margin-top: 10px;
-        }
-
-        .button {
-            background-color: #FF9800;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.2rem;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #fb8c00;
-        }
-    </style>
 </head>
 <body>
-    <h1>WaffleCoin Clicker Game</h1>
-    <p>Click on the waffles to earn WaffleCoins!</p>
+    <header>
+        <div class="logo">
+            <img src="images/wafflecoin-logo.png" alt="WaffleCoin Logo" style="width: 150px; height: 150px;">
+            <h1>WaffleCoin Minigame</h1>
+        </div>
+        <h2>Play and Earn WaffleCoins!</h2>
+    </header>
 
-    <div id="waffle" onclick="incrementScore()"></div>
+    <section class="content">
+        <h3>Minigame</h3>
+        <p>Play and earn WaffleCoins by achieving high scores!</p>
 
-    <div class="score-board">
-        <p>Score: <span id="score">0</span></p>
-    </div>
-    
-    <div class="timer">
-        Time Left: <span id="timeLeft">30</span> seconds
-    </div>
+        <div id="game">
+            <button onclick="startGame()">Start Game</button>
+            <p id="score">Score: 0</p>
+        </div>
+    </section>
 
-    <button class="button" onclick="startGame()">Start Game</button>
+    <footer>
+        <p>&copy; 2024 WaffleCoin. All rights reserved.</p>
+    </footer>
 
     <script>
         let score = 0;
-        let timeLeft = 30;
-        let gameInterval;
-        let timerInterval;
 
         function startGame() {
             score = 0;
-            timeLeft = 30;
-            document.getElementById("score").textContent = score;
-            document.getElementById("timeLeft").textContent = timeLeft;
-
-            gameInterval = setInterval(moveWaffle, 1000);  // Move the waffle every second
-            timerInterval = setInterval(updateTimer, 1000);  // Countdown timer
-
-            // Disable the start button once game starts
-            document.querySelector(".button").disabled = true;
-        }
-
-        function incrementScore() {
-            score++;
-            document.getElementById("score").textContent = score;
-        }
-
-        function moveWaffle() {
-            const waffle = document.getElementById("waffle");
-            const randomX = Math.random() * (window.innerWidth - waffle.offsetWidth);
-            const randomY = Math.random() * (window.innerHeight - waffle.offsetHeight);
-
-            waffle.style.left = randomX + "px";
-            waffle.style.top = randomY + "px";
-        }
-
-        function updateTimer() {
-            timeLeft--;
-            document.getElementById("timeLeft").textContent = timeLeft;
-
-            if (timeLeft <= 0) {
-                clearInterval(gameInterval);
-                clearInterval(timerInterval);
-                alert("Game Over! Your score: " + score);
-                document.querySelector(".button").disabled = false; // Re-enable start button
-            }
+            document.getElementById('score').textContent = "Score: " + score;
+            setInterval(function() {
+                score += 1;
+                document.getElementById('score').textContent = "Score: " + score;
+            }, 1000);
         }
     </script>
 </body>

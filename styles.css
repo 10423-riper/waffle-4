@@ -95,6 +95,23 @@ header h2 {
     flex-wrap: wrap;
 }
 
+/* Roadmap */
+.roadmap {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.roadmap ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.roadmap li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Footer */
 footer {
     text-align: center;
     margin-top: 60px;
